@@ -7,7 +7,7 @@ gum.addEventListener('click', function(){
     description.scrollHeight='220px';
     main.insertBefore(description, tower);
 })
-gum.addEventListener('contextmenu', function(e){
+description.addEventListener('click', function(e){
     e.preventDefault();
     description.remove();
 })
@@ -17,7 +17,7 @@ tower.addEventListener('click', function(){
     description.scrollHeight='220px';
     main.insertBefore(description, Petr);
 })
-tower.addEventListener('contextmenu', function(e){
+description.addEventListener('click', function(e){
     e.preventDefault();
     description.remove();
 })
@@ -28,7 +28,7 @@ Petr.addEventListener('click', function(){
     description_p.style.left=tower.offsetLeft+40+'px';
     main.insertBefore(description_p, tower);
 })
-Petr.addEventListener('contextmenu', function(e){
+description_p.addEventListener('click', function(e){
     e.preventDefault();
     description_p.remove();
 })
@@ -38,7 +38,7 @@ sobor.addEventListener('click', function(){
     description.scrollHeight='220px';
     main.insertBefore(description, cathedral);
 })
-sobor.addEventListener('contextmenu', function(e){
+description.addEventListener('click', function(e){
     e.preventDefault();
     description.remove();
 })
@@ -48,7 +48,7 @@ cathedral.addEventListener('click', function(){
     description.scrollHeight='220px';
     main.insertBefore(description, Leningrad);
 })
-cathedral.addEventListener('contextmenu', function(e){
+description.addEventListener('click', function(e){
     e.preventDefault();
     description.remove();
 })
@@ -59,7 +59,24 @@ Leningrad.addEventListener('click', function(){
     description_p.style.left=cathedral.offsetLeft+40+'px';
     main.insertBefore(description_p, Leningrad);
 })
-Leningrad.addEventListener('contextmenu', function(e){
+description_p.addEventListener('click', function(e){
     e.preventDefault();
     description_p.remove();
 })
+const items=["гум", "спасская башня", "памятник петру 1", 'храм василия блаженного', "храм христа спасителя", 'гостиница ленинградская']
+document.addEventListener('keydown', (e) => {
+    if (e.keyCode==13){
+        const query = search.value.toLowerCase();
+        items.forEach(item =>{
+            if(item.toLowerCase().includes(query)){
+                if (items.indexOf(query)==0) gum.scrollIntoView(true);
+                else if (items.indexOf(query)==1) tower.scrollIntoView(true);
+                else if (items.indexOf(query)==2) Petr.scrollIntoView(true);
+                else if (items.indexOf(query)==3) sobor.scrollIntoView(true);
+                else if (items.indexOf(query)==4) cathedral.scrollIntoView(true);
+                else if (items.indexOf(query)==5) Leningrad.scrollIntoView(true);
+            }
+        })
+    }
+})
+console.log(Petr.offsetTop);
