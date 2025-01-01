@@ -1,0 +1,101 @@
+header{
+    background-color: orange;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    position: fixed;
+    width: 100pc;
+    top: 0px;
+    left: 0px;
+
+}
+header > div{
+    display: inline-block;
+    margin-left: 100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: white;
+    border-bottom: 2px orange solid;
+    transition: 0.5s;
+    font-size: 17px;
+}
+header > div:hover{
+    border-bottom: 2px white solid;
+    transition: 0.5s;
+}
+.search{
+    width: 190px;
+    margin-left: 30px;
+    background-color: rgb(224, 228, 233);
+    border: solid 1px rgb(158, 151, 151);
+    border-radius: 10px;
+}
+.search:hover{
+    border: solid 1px rgb(158, 151, 151);
+}
+#btn{
+    display: inline-block;
+    background-image: url(../img/search.png);
+    background-size: cover;
+    height: 15px;
+    border:  rgb(224, 228, 233);
+    border-radius: 10px;
+    margin-bottom: 3px;
+}
+#search{
+    background-color: rgb(230, 234, 239);
+    border:  rgb(224, 228, 233);
+    border-radius: 10px;
+    margin: 3px;
+}
+.tmp{
+    width: 100pc;
+    height: 30px;
+}
+body{
+    background-color: rgb(47, 46, 46);
+}
+::-webkit-scrollbar {
+    width: 0;
+  }
+img{
+    height:200px;
+    width: 150px;
+
+}
+main > div{
+    border-radius: 4px;
+    border: 2px solid rgb(86, 86, 83);
+    background-color: rgb(142, 179, 239);
+    display: inline-block;
+    width: 150px;
+    margin-top: 50px;
+    margin-left: 55px;
+    padding-bottom: 5px;
+    text-align: center
+}
+.description{
+    overflow: auto;
+    height: 215px;
+    background-color: rgb(45, 45, 105);
+    border-radius: 5px;
+    border: 2px solid rgb(86, 86, 83);
+    padding: 10px;
+    width: 9pc;
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    margin-left: 0px;
+}
+.description_p{
+    overflow: auto;
+    height: 215px;
+    background-color: rgb(45, 45, 105);
+    border-radius: 5px;
+    border: 2px solid rgb(86, 86, 83);
+    padding: 10px;
+    width: 9pc;
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    margin-left: 0px;
+}
