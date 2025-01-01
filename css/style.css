@@ -28,6 +28,9 @@ header > div:hover{
     background-color: rgb(224, 228, 233);
     border: solid 1px rgb(158, 151, 151);
     border-radius: 10px;
+    position: absolute;
+    right: 210px;
+}
 }
 .search:hover{
     border: solid 1px rgb(158, 151, 151);
