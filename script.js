@@ -2,13 +2,13 @@ let description= document.createElement('DIV');
 let description_p= document.createElement('DIV');
 function description_def(){
     description.classList='description';
-    description.scrollHeight='220px';
+    description.style.height=gum.offsetHeight-main.offsetHeight*0.037+"px";
     description_p.innerHTML='';
     description_p.remove();
 }
 function description_p_def(){
     description_p.classList='description_p';
-    description_p.scrollHeight='220px';
+    description_p.style.height=gum.offsetHeight-main.offsetHeight*0.037+"px";
     description.innerHTML='';
     description.remove();
 }
@@ -177,4 +177,4 @@ document.addEventListener('keydown', (e) => {
     if (e.keyCode==13) search_f();
 })
 btn.addEventListener('click', search_f);
-console.log(Petr.offsetTop, "NEW");
+console.log(gum.offsetHeight-main.offsetHeight*0.41+"px");
