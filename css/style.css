@@ -1,3 +1,39 @@
+@media only screen and (max-width: 480px){
+    #search{
+        width: 75%;
+        bottom: 15%;
+    }
+    header > div{
+        font-size: 80%;
+    }
+    main >div{
+        font-size: 70%;
+    }
+    .description{
+        font-size: 70%;
+    }
+    .description_p{
+        font-size: 70%;
+    }
+}
+@media only screen and (min-width: 481px){
+    header > div{
+        font-size: 190%;
+    }
+    #search{
+        width: 85%;
+        bottom: 20%;
+    }
+    main >div{
+        font-size: 150%;
+    }
+    .description{
+        font-size: 130%;
+    }
+    .description_p{
+        font-size: 130%;
+    }
+}
 header{
     background-color: orange;
     border-bottom-left-radius: 10%;
@@ -16,17 +52,15 @@ header > div{
     margin-bottom: 2%;
     color: white;
     transition: 0.5s;
-    font-size: 190%;
     &:hover{
         color: rgb(207, 195, 195);
         transition: 0.5s;
     }
     cursor: pointer;
 }
-
 .search{
     height: 50%;
-    width: 32%;
+    width: 30%;
     margin-left: 12%;
     margin-top: 1.5%;
     background-color: rgb(224, 228, 233);
@@ -55,11 +89,9 @@ header > div{
     border:  rgb(224, 228, 233);
     border-radius: 20px;
     margin-left: 2%;
-    width: 85%;
     height: 60%;
     outline: none;
     position: relative;
-    bottom: 20%;
 }
 
 body{
@@ -88,7 +120,6 @@ main > div{
     margin-left: 7%;
     padding-bottom: 1%;
     text-align: center;
-    font-size: 150%;
     z-index: 300;
     cursor: pointer;
 }
@@ -100,7 +131,6 @@ main > div{
     padding: 2%;
     width: 23%;
     text-align: center;
-    font-size: 130%;
     display: inline-block;
     position: absolute;
     margin-left: 0px;
@@ -114,7 +144,6 @@ main > div{
     padding: 2%;
     width: 23%;
     text-align: center;
-    font-size: 130%;
     display: inline-block;
     position: absolute;
     margin-left: 0px;
