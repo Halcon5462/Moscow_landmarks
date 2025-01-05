@@ -9,7 +9,7 @@ function description_def(){
         description.style.top=100+'px';
     }
     else{
-        description_p.style.height=gum.offsetHeight-main.offsetHeight*0.037+"px";
+        description.style.height=gum.offsetHeight-main.offsetHeight*0.037+"px";
     }
 }
 function description_p_def(){
