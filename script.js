@@ -1,8 +1,10 @@
 let description= document.createElement('DIV');
 let description_p= document.createElement('DIV');
+btn.style.width=btn.offsetHeight+'px';
 function description_def(){
     description.classList='description';
     description_p.innerHTML='';
+    description.firstElementChild.style.height=description.firstElementChild.offsetWidth+'px';
     description_p.remove();
     if (window.innerWidth<500){
         description.style.left=50+"px";
@@ -14,8 +16,8 @@ function description_def(){
 }
 function description_p_def(){
     description_p.classList='description_p';
-    
     description.innerHTML='';
+    description_p.firstElementChild.style.height=description_p.firstElementChild.offsetWidth+'px';
     description.remove();
     if (window.innerWidth<500){
         description_p.style.left=50+"px";
