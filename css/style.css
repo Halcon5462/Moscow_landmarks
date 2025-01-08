@@ -146,3 +146,13 @@ main > div{
     border-radius: 10px;
     display: block;
 }
+.gift{
+    background-image: url(../img/pig.png);
+    background-size: cover;
+    border: none;
+    background-color: none;
+    display: inline-block;
+    position: absolute;
+    height: 20%;
+    width: 10%;
+}
