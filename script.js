@@ -1,6 +1,29 @@
 let description= document.createElement('DIV');
 let description_p= document.createElement('DIV');
+let present = document.createElement('DIV');
 btn.style.width=btn.offsetHeight+'px';
+let timerID = setInterval(pres, 5000);
+let count_p=0;
+let str='';
+function pres(){
+    let x=Math.floor(Math.random() * main.offsetWidth);
+    let y=Math.floor(Math.random() * main.offsetHeight);
+    present.classList='gift';
+    present.style.left=x+'px';
+    present.style.top=y+'px';
+    body.insertBefore(present, header);
+}
+present.addEventListener('click', function(){
+    present.remove();
+    count_p++;
+    if (count_p>=2 && count_p<=4){
+        str=' раза';
+    }
+    else {
+        str=' раз'
+    }
+    alert('Вы поймали новогодний подарок уже '+ count_p + str);
+})
 function description_def(){
     description.classList='description';
     description_p.innerHTML='';
