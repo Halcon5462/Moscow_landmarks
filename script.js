@@ -102,6 +102,24 @@ function description_huamin(){
     main.insertBefore(description_p, huamin);
     description_p_def();
 }
+function description_VDNH(){
+    description.innerHTML='<img src="img/VDNH_map.jpg"><b>ВДНХ</b><br>  Выставка достижений народного хозяйства (ОАО «ВДНХ») (ранее Всесоюзная сельскохозяйственная выставка (ВСХВ) и Всероссийский выставочный центр, (ВВЦ)) — выставочный комплекс в Северо-Восточном округе Москвы, второй по величине выставочный комплекс в Москве. Входит в 50 крупнейших выставочных центров мира. Общая площадь территории ВДНХ — 237,5 га, площадь павильонов — 134 тыс. м².<br>Это выставочный комплекс в Останкинском районе Северо-Восточного административного округа города Москвы. Является крупнейшим выставочным комплексом в городе и входит в 50 крупнейших выставочных центров мира.<br>Ежегодно ВДНХ посещают 30 миллионов гостей.<br>На территории выставки расположено множество шедевров архитектуры — 49 объектов ВДНХ признаны памятниками культурного наследия.';
+    main.insertBefore(description, ostankino);
+    description_def();
+}
+function description_ostankino(){
+    description.innerHTML='<img src="img/ostankino_map.jpg"><b>Останкинская телебашня</b><br>  главная теле- и радиовещательная башня страны, располагается у телецентра «Останкино», на улице Академика Королева<br>Высота Останкинской телебашни (с флагштоком) — 540 метров. Бетонная часть — 385 метров, опоры — 62 метра. По высоте главная телебашня России находится на 4 месте среди телебашен мира.<br>Архитектура башни — образец советского модернизма. Издалека сооружение похоже на ракету, готовящуюся к запуску. Конусообразное основание на 10 «лепестках» напоминает нижнюю ступень корабля, а круглые окна — иллюминаторы.<br>В расширении телебашни на уровне 325–360 метров разместились оборудование, 3-этажный ресторан и смотровая площадка, созданная по типу телебашни в Штутгарте.<br>Основная (застеклённая) смотровая площадка на телебашне расположена на высоте около 337 метров. Смотровая площадка открытого типа находится выше — на уровне чуть более 340 метров.';
+    main.insertBefore(description, sokolniki);
+    description_def();
+}
+function description_sokolniki(){  
+    description_p.innerHTML='<img src="img/sokolniki_map.jpg"><b> Парк Сокольники </b> <br> парк на территории района Сокольники на востоке Москвы, с юга ограниченный Сокольническим Валом, с востока — Богородским шоссе, с севера — Ростокинским проездом, с запада — линией Ярославской железной дороги. На севере смыкается с Лосиным островом. Площадь парка — 516 гектаров. <br> Основная достопримечательность — живописная природа. Вековые деревья создают теневую прохладу на просеках в жаркий полдень.  <br> Парк включает в себя три зоны: заповедную (21,4 га), прогулочную (194,1 га) и зону охраны историко-культурных объектов (13,7 га). <br>В парке находится ряд спортивных объектов: физкультурно-оздоровительный комплекс «Сокольники», центр спортивных развлечений на открытом воздухе «Лидер», теннисный городок. Организован прокат веломобилей, велосипедов, сегвеев и различного спортивного инвентаря. ';
+    if (window.innerWidth>500){
+        description_p.style.left=ostankino.offsetLeft+40+'px';
+    }
+    main.insertBefore(description_p, sokolniki);
+    description_p_def();
+}
 gum.addEventListener('click', description_gum);
 tower.addEventListener('click', description_tower);
 Petr.addEventListener('click', description_Petr);
@@ -111,6 +129,9 @@ Leningrad.addEventListener('click', description_Leningrad)
 city.addEventListener('click', description_city);
 kuscovo.addEventListener('click', description_kuscovo);
 huamin.addEventListener('click', description_huamin);
+VDNH.addEventListener('click', description_VDNH);
+ostankino.addEventListener('click', description_ostankino);
+sokolniki.addEventListener('click', description_sokolniki);
 description.addEventListener('click', function(){
     description.innerHTML='';
     description.remove();
@@ -121,7 +142,7 @@ description_p.addEventListener('click', function(){
 })
 
 function search_f(){
-    const items=["гум", "спасская башня", "памятник петру 1", 'храм василия блаженного', "храм христа спасителя", 'гостиница ленинградская', 'москва-сити', 'усадьба кусково', 'парк хуамин'];
+    const items=["гум", "спасская башня", "памятник петру 1", 'храм василия блаженного', "храм христа спасителя", 'гостиница ленинградская', 'москва-сити', 'усадьба кусково', 'парк хуамин', 'вднх', 'останкинская телебашня', 'парк сокольники'];
     const query = search.value.toLowerCase();
     if (items.findIndex(element => element.includes(query))==0){
         window.scrollTo(0, gum.offsetTop-header.offsetHeight);
@@ -158,6 +179,18 @@ function search_f(){
     else if (items.findIndex(element => element.includes(query))==8){
         window.scrollTo(0, huamin.offsetTop-header.offsetHeight);
         description_huamin();
+    }
+    else if (items.findIndex(element => element.includes(query))==9){
+        window.scrollTo(0, VDNH.offsetTop-header.offsetHeight);
+        description_VDNH();
+    }
+    else if (items.findIndex(element => element.includes(query))==10){
+        window.scrollTo(0, ostankino.offsetTop-header.offsetHeight);
+        description_ostankino();
+    }
+    else if (items.findIndex(element => element.includes(query))==11){
+        window.scrollTo(0, sokolniki.offsetTop-header.offsetHeight);
+        description_sokolniki();
     }
     return 0;
 }
